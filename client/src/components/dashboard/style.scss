@@ -1,0 +1,30 @@
+.dashboard-container {
+  position: absolute;
+  padding: 150px;
+  border: 1px solid #f00;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: repeat(2, 300px);
+  grid-template-rows: repeat(3, 30px);
+  gap: 50px;
+
+  button {
+    height: 70px;
+    border: 0;
+    background-color: rgb(255, 96, 96);
+    color: #fff;
+    border-radius: 4px;
+    font-weight: 600;
+    transition: 0.5s;
+  }
+  button:hover {
+    background-color: #ffb2b2;
+    color: rgb(255, 96, 96);
+    border: 2px solid rgb(255, 96, 96);
+    color: #fff;
+  } 
+}

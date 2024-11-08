@@ -1,0 +1,31 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  width: 200px;
+  gap: 10px;
+  border: 2px solid #f00;
+  padding: 10px;
+  border-radius: 1rem;
+  img {
+    width: 150px;
+  }
+  button {
+    width: 100%;
+    background: 0;
+    border: 2px solid #f00;
+    border-radius: 1rem;
+    padding: 0.5rem;
+    background-color: #f00;
+    color: #fff;
+    transition: 0.2s;
+  }
+  button:hover {
+    background-color: #fff;
+    color: #f00;
+  }
+  button.added {
+    transform: scale(1.06);
+  }
+}

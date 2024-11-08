@@ -1,0 +1,34 @@
+nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  border-bottom: 3px solid rgb(200, 0, 0);
+  padding-bottom: 30px;
+
+  div {
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-bottom: 2px solid rgb(163, 34, 34);
+    color: #f00;
+  }
+  div.selected {
+    border-right: 10px solid rgb(227, 0, 0);
+  }
+  button {
+    margin-top: 10px;
+    width: fit-content;
+    border-radius: 0.5rem;
+    background: #f00;
+    color: #fff;
+    border: 0;
+    padding: 3px;
+    height: fit-content;
+    font-size: 14px;
+    cursor: pointer;
+  }
+} 
