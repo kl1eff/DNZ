@@ -15,22 +15,21 @@ app.use(cors());
 app.use(express.json());
 app.use(express.static(path.resolve(__dirname, 'static')));
 app.use(fileUpload({}));
-app.use('/api', router);	
+app.use('/api', router);
 app.use(errorHandler);
 
 app.get('/', (req, res) => {
-	res.status(200).json({message: 'working)'});
-})
-
+  res.status(200).json({ message: 'working)' });
+});
 
 async function start() {
-	try { 
-		await sequelize.authenticate();
-		await sequelize.sync({ alter: true });
-		app.listen(PORT, () => console.log(`starting server at port ${PORT}`));
-	} catch (e) {
-		console.log(e);
-	} 
-};
+  try {
+    await sequelize.authenticate();
+    await sequelize.sync({ alter: true });
+    app.listen(PORT, () => console.log(`starting server at port ${PORT}`));
+  } catch (e) {
+    console.log(e);
+  }
+}
 
-start();   
+start();

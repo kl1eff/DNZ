@@ -5,7 +5,11 @@ body {
 }
 
 main {
+  height: 100%;
   aside {
+    @media (max-width: 800px) {
+      display: none;
+    }
     padding-top: 30px;
     height: 100vh;
     position: fixed;

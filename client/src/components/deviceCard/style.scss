@@ -1,15 +1,23 @@
 .card {
+  @media (max-width: 800px) {
+    flex-direction: row;
+    height: 100px;
+    font-size: 15px;
+  }
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
-  width: 200px;
+  width: 100%;
   gap: 10px;
   border: 2px solid #f00;
   padding: 10px;
   border-radius: 1rem;
   img {
     width: 150px;
+    @media (max-width: 800px) {
+      width: 70px;
+    }
   }
   button {
     width: 100%;
@@ -20,6 +28,9 @@
     background-color: #f00;
     color: #fff;
     transition: 0.2s;
+    @media (max-width: 800px) {
+      width: 80px;
+    }
   }
   button:hover {
     background-color: #fff;

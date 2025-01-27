@@ -25,7 +25,7 @@ const Header = observer(() => {
     if (input.length > 0) {
       fetchOneDeviceByName(input).then((data) => data && device.setDevices([data]));
     } else {
-      fetchDevices(device.selectedType.id, device.selectedBrand.id, device.page, 2).then(data => {
+      fetchDevices(device.selectedType.id, device.selectedBrand.id, device.page, device.limit).then(data => {
         device.setDevices(data.rows);
         device.setTotalCount(data.count);
       })
@@ -71,7 +71,7 @@ const Header = observer(() => {
       </div>
       {isAdmin && <Link className='dashboard' href='/dashboard'>Админ панель</Link>}
       {isAuth ? <>
-        <p>{jwtDecode(getCookie('token') ?? null)?.email}</p>
+        <p className='email'>{jwtDecode(getCookie('token') ?? null)?.email}</p>
         <p onClick={logout}>Выход</p>
       </> : <>
         <p onClick={() => setModalLoginActive(true)}>Вход</p>

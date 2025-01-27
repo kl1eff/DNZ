@@ -6,13 +6,28 @@
   padding-top: 20px;
   margin-top: 64px;
 
+  @media (max-width: 800px) {
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 0;
+    height: 80%;
+    gap: 0;
+  }
+
   .deviceList {
+    padding-left: 40px;
     height: fit-content;
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(5, 200px);
     grid-template-rows: repeat(2, 1fr);
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
+    grid-column-gap: 70px;
+    grid-row-gap: 10px;
+    width: 200px;
+    @media (max-width: 800px) {
+      display: flex;
+      flex-direction: column;
+      padding-left: 0;
+      width: 90%;
+    }
   }
-  
 }
